@@ -116,7 +116,20 @@ body {
   margin-top: 140px;
   margin-bottom: 80px;
 }
+.section-heading h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: #232d39;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
+.section-heading h4 em {
+  font-style: normal;
+  color: #ed563b;
+}
 .section-heading h2 {
   font-size: 28px;
   font-weight: 800;

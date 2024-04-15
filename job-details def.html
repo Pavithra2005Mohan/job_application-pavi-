@@ -16,7 +16,31 @@
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
+<style>
+	body {
+	background-color: #fff;
+	color: #333;
+	transition: background-color 0.5s ease;
+}
 
+.dark-mode {
+	background-color: #222;
+	color: #ddd;
+}
+
+button {
+	padding: 10px 20px;
+	border: none;
+	background-color: #555;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.5s ease;
+}
+
+button:hover {
+	background-color: #777;
+}
+</style>
     </head>
     
     <body>
@@ -57,6 +81,8 @@
                                 </div>
                             </li>
                             <li><a href="contact.html">Contact</a></li> 
+							<li><button id="dark-mode-btn">🌙</button></li>
+
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -269,6 +295,21 @@
     <script src="assets/js/mixitup.js"></script> 
     <script src="assets/js/accordions.js"></script>
     <script src="assets/js/custom.js"></script>
+	<script>
+	const darkModeBtn = document.getElementById('dark-mode-btn');
+let darkMode = false;
+
+darkModeBtn.addEventListener('click', () => {
+	darkMode = !darkMode;
+	if (darkMode) {
+		document.body.classList.add('dark-mode');
+		darkModeBtn.textContent = '☀';
+	} else {
+		document.body.classList.remove('dark-mode');
+		darkModeBtn.textContent = '🌙';
+	}
+});
+</script>
 
   </body>
 </html>
