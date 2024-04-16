@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 	<meta name="google-translate-customization" content="8b0e0b8e8f9f0a0a0b0a-0bbcbacbcbbcbdcdcdcdcdcdc"></meta>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Amrita Job Agency Website</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -65,12 +65,9 @@ button:hover {
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="home.html" class="logo">Job Agency<em> Website</em></a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
+                        <a href="index.html" class="logo">Job Agency<em> Website</em></a>
                         <ul class="nav">
-                            <li><a href="home.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="jobs.html" >Jobs</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
@@ -87,7 +84,6 @@ button:hover {
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
@@ -108,8 +104,6 @@ button:hover {
             </div>
         </div>
     </section>
-
-    <!-- ***** Features Item Start ***** -->
     <section class="section" id="features">
         <div class="container">
             <div class="row text-center">
@@ -275,8 +269,6 @@ translateBtn.addEventListener('click', () => {
     translateBtn.textContent = 'Translate';
   }
 });
-
-// Initialize the Google Translate element
 google.load('elements', '1', {'packages': 'translator'});
 google.setOnLoadCallback(initializeGoogleTranslate);
 function initializeGoogleTranslate() {

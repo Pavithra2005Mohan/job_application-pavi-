@@ -163,7 +163,7 @@ i span{
 .signup a:hover{
   text-decoration: underline;
 }
-   button {
+   .l {
        background: #3498db;
   border: 1px solid #2691d9;
   color: white;
@@ -174,73 +174,97 @@ i span{
   font-family: 'Montserrat',sans-serif;
  padding: 8px 120px;;
     }
-    button:hover {
+    .l:hover {
       background: #2691d9;
+	  
+.t {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #3498db;
+  border: 1px solid #2691d9;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat',sans-serif;
+  padding: 8px 8px;
+}
+
+.t:hover {
+  background: #2691d9;
+}
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
    <body>
- <div class="bg-img">
-    <div class="content">
-      <header>Login Form</header>
-      <form id="loginForm" action="#">
-        <div class="field">
-          <span class="fa fa-user"></span>
-          <input id="emailInput" type="text" required placeholder="Email or Phone">
-        </div>
-		<br>
-        <div class="field">
-          <span class="fa fa-lock"></span>
-          <input id="passwordInput" type="password" class="pass-key" required placeholder="Password">
-          <span class="show">SHOW</span>
-        </div>
-        <div class="pass">
-          <a href="forgot password.html">Forgot Password?</a>
-        </div>
-        <!-- Using a button styled to look like a link -->
-        <button id="loginButton" type="button" class="login-button" onclick="login()">LOGIN</button>
-      </form>
-      <div class="login">
-        Or login with
-      </div>
-      <div class="links">
-                         <button type="button" onclick="google()">Google</button>
+   <header>
+   <button type="button" class="t" onclick="translate()"><i class="fa fa-language"></i></button>
+      <div class="bg-img">
+         <div class="content">
 
+            <header>Login Form</header>
+            <form id="loginForm" action="#">
+               <div class="field">
+                  <span class="fa fa-user"></span>
+                  <input id="emailInput" type="text" required placeholder="Email or Phone">
+               </div>
+               <br>
+               <div class="field">
+                  <span class="fa fa-lock"></span>
+                  <input id="passwordInput" type="password" class="pass-key" required placeholder="Password">
+                  <span class="show">SHOW</span>
+               </div>
+               <div class="pass">
+                  <a href="forgot password.html">Forgot Password?</a>
+               </div>
+               <button id="loginButton"class="l" type="button" class="login-button" onclick="login()">LOGIN</button>
+            </form>
+            <div class="login">
+               Or login with
+            </div>
+            <div class="links">
+               <button type="button"class="l" onclick="google()">Google</button>
+            </div>
+            <div class="signup">
+               Don't have account? <a href="sign up.html">Sign Up</a>
+            </div>
+         </div>
       </div>
-      <div class="signup">
-        Don't have account? <a href="sign up.html">Sign Up</a>
-      </div>
-    </div>
-  </div>
 
       <script>
-	  	   function google() {
-    // Redirect to home.html
-    window.location.href = "home.html";
-  }
-    function login() {
-      var email = document.getElementById("emailInput").value;
-      var password = document.getElementById("passwordInput").value;
+         function google() {
+            window.location.href = "home.html";
+         }
 
-      // Check if email and password are not empty
-      if (email.trim() !== "" && password.trim() !== "") {
-        // Redirect to home.html
-        window.location.href = "home.html";
-      } else {
-        alert("Please enter email and password");
-      }
-    }
+         function translate() {
+            window.open("https://translate.google.com/", "_blank");
+         }
+
+         function login() {
+            var email = document.getElementById("emailInput").value;
+            var password = document.getElementById("passwordInput").value;
+
+            if (email.trim() !== "" && password.trim() !== "") {
+               window.location.href = "home.html";
+            } else {
+               alert("Please enter email and password");
+            }
+         }
+
          const pass_field = document.querySelector('.pass-key');
          const showBtn = document.querySelector('.show');
          showBtn.addEventListener('click', function(){
-          if(pass_field.type === "password"){
-            pass_field.type = "text";
-            showBtn.textContent = "HIDE";
-            showBtn.style.color = "#3498db";
-          }else{
-            pass_field.type = "password";
-            showBtn.textContent = "SHOW";
-            showBtn.style.color = "#222";
-          }
+            if(pass_field.type === "password"){
+               pass_field.type = "text";
+               showBtn.textContent = "HIDE";
+               showBtn.style.color = "#3498db";
+            }else{
+               pass_field.type = "password";
+               showBtn.textContent = "SHOW";
+               showBtn.style.color = "#222";
+            }
          });
       </script>
    </body>

@@ -50,7 +50,6 @@ button:hover {
     
     <body>
     
-    <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
       <div class="preloader-inner">
         <span class="dot"></span>
@@ -61,20 +60,13 @@ button:hover {
         </div>
       </div>
     </div>
-    <!-- ***** Preloader End ***** -->
-    
-    
-    <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
 	<section id="top">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="home.html" class="logo">Job Agency<em> Website</em></a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
+                       <a href="home.html" class="logo">Job Agency<em> Website</em></a>
                         <ul class="nav">
                             <li><a href="home.html">Home</a></li>
                             <li><a href="jobs.html" >Jobs</a></li>
@@ -93,15 +85,12 @@ button:hover {
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
         </div>
 		<div id="google-translate-element"></div></section>
     </header>
-    <!-- ***** Header Area End ***** -->
-
     <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
         <div class="container">
             <div class="row">
@@ -241,8 +230,6 @@ translateBtn.addEventListener('click', () => {
     translateBtn.textContent = 'Translate';
   }
 });
-
-// Initialize the Google Translate element
 google.load('elements', '1', {'packages': 'translator'});
 google.setOnLoadCallback(initializeGoogleTranslate);
 function initializeGoogleTranslate() {

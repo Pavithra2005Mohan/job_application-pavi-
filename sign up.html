@@ -202,7 +202,6 @@ i span{
           <input id="confirmPasswordInput" type="password" class="pass-key" required placeholder="Confirm Password">
           <span class="show">SHOW</span>
         </div><br>
-        <!-- Using a button styled to look like a link -->
         <button id="signupButton" type="button" class="signup-button" onclick="signup()">SIGN UP</button>
       </form>
       <div class="login">
@@ -220,30 +219,48 @@ i span{
 
   <script>
   	  	   function google() {
-    // Redirect to home.html
     window.location.href = "home.html";
   }
-    // JavaScript function to handle signup button click
-    function signup() {
-      var fullName = document.getElementById("fullNameInput").value;
-      var email = document.getElementById("emailInput").value;
-      var password = document.getElementById("passwordInput").value;
-      var confirmPassword = document.getElementById("confirmPasswordInput").value;
+function signup() {
+  var fullName = document.getElementById("fullNameInput").value;
+  var email = document.getElementById("emailInput").value;
+  var password = document.getElementById("passwordInput").value;
+  var confirmPassword = document.getElementById("confirmPasswordInput").value;
 
-      // Check if all fields are not empty and passwords match
-      if (fullName.trim() !== "" && email.trim() !== "" && password.trim() !== "" && confirmPassword.trim() !== "") {
-        if (password === confirmPassword) {
-          // Proceed with signup functionality
-          alert("Sign up successful!");
-          // Redirect to login page or any other desired page
-          window.location.href = "login.html";
-        } else {
-          alert("Passwords do not match");
-        }
-      } else {
-        alert("Please fill in all fields");
-      }
-    }
+  if (fullName.trim() === "") {
+    alert("Please enter your full name.");
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  if (password.trim() === "") {
+    alert("Please enter a password.");
+    return;
+  }
+
+  if (confirmPassword.trim() === "") {
+    alert("Please confirm your password.");
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
+
+  alert("Sign up successful!");
+  window.location.href = "login.html";
+}
+
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
   </script>
 </body>
 </html>

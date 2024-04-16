@@ -81,10 +81,7 @@ button:hover {
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
                         <a href="home.html" class="logo">Job Agency<em> Website</em></a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="home.html"class="active">Home</a></li>
                             <li><a href="jobs.html" >Jobs</a></li>
@@ -98,14 +95,12 @@ button:hover {
                             </li>
                             <li><a href="contact.html">Contact</a></li>
 <li><button id="dark-mode-btn">🌙</button><button id="to-bottom-btn">⬇</button>
-<!--<button id="translate-btn">Translate</button>-->
 </li>
 							
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
@@ -199,8 +194,6 @@ button:hover {
             </div>
         </div>
     </section>
-    <!-- ***** Cars Ends ***** -->
-
     <section class="section section-bg" id="schedule" style="background-image: url(assets/images/about-fullscreen-1-1920x700.jpg)">
         <div class="container">
             <div class="row">
@@ -358,8 +351,6 @@ translateBtn.addEventListener('click', () => {
     translateBtn.textContent = 'Translate';
   }
 });
-
-// Initialize the Google Translate element
 google.load('elements', '1', {'packages': 'translator'});
 google.setOnLoadCallback(initializeGoogleTranslate);
 function initializeGoogleTranslate() {
