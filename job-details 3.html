@@ -45,12 +45,104 @@ button:hover {
 #google-translate-element {
 	margin-top: 20px;
 }
+@media only screen and (max-width: 480px) {
+  .header-area {
+    padding: 10px 0;
+  }
+
+  .main-nav {
+    flex-direction: column;
+  }
+
+  .main-nav a {
+    padding: 10px;
+  }
+
+  .main-nav .logo {
+    font-size: 1.5rem;
+  }
+
+  .main-nav .nav {
+    flex-direction: column;
+  }
+
+  .main-nav .nav li {
+    text-align: center;
+  }
+
+  .main-nav .dropdown-menu {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-bg {
+    background-attachment: scroll;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  #tabs .nav-link {
+    padding: 10px;
+  }
+
+  #tabs .nav-link.active {
+    background-color: #555;
+    color: #fff;
+  }
+
+  #tabs .tab-content article {
+    padding: 10px;
+  }
+
+  #tabs .tab-content h4 {
+    font-size: 1.5rem;
+  }
+
+  #tabs .tab-content p {
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    margin-bottom: 20px;
+  }
+
+  .contact-form input[type="text"] {
+    width: 100%;
+  }
+
+  .h5 {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+
+  #to-top-btn {
+    display: none;
+  }
+
+  #to-bottom-btn {
+    display: none;
+  }
+
+  #dark-mode-btn {
+    display: block;
+  }
+}
 </style>
     </head>
     
     <body>
     
-    <!-- ***** Preloader Start ***** -->
     <div id="js-preloader" class="js-preloader">
       <div class="preloader-inner">
         <span class="dot"></span>
@@ -61,20 +153,13 @@ button:hover {
         </div>
       </div>
     </div>
-    <!-- ***** Preloader End ***** -->
-    
-    
-    <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
 	<section id="top">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
                         <a href="home.html" class="logo">Job Agency<em> Website</em></a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="home.html">Home</a></li>
                             <li><a href="jobs.html" class="active">Jobs</a></li>
@@ -93,16 +178,12 @@ button:hover {
                         <a class='menu-trigger'>
                             <span>Menu</span>
                         </a>
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
         </div>
 		<div id="google-translate-element"></div></section>
     </header>
-    <!-- ***** Header Area End ***** -->
-
-    <!-- ***** Call to Action Start ***** -->
     <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
         <div class="container">
             <div class="row">
@@ -121,9 +202,6 @@ button:hover {
             </div>
         </div>
     </section>
-    <!-- ***** Call to Action End ***** -->
-
-    <!-- ***** Fleet Starts ***** -->
     <section class="section" id="trainers">
         <div class="container">
             <br>
@@ -208,10 +286,7 @@ Passion for the entertainment industry and a desire to contribute to projects th
             </div>
         </div>
     </section>
-    <!-- ***** Fleet Ends ***** -->
-    
-    <!-- ***** Footer Start ***** -->
-    <footer>
+        <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -220,9 +295,6 @@ Passion for the entertainment industry and a desire to contribute to projects th
         </div>
     </footer>
 	<section id="bottom"></section>
-
-
-    <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -362,7 +434,6 @@ translateBtn.addEventListener('click', () => {
   }
 });
 
-// Initialize the Google Translate element
 google.load('elements', '1', {'packages': 'translator'});
 google.setOnLoadCallback(initializeGoogleTranslate);
 function initializeGoogleTranslate() {

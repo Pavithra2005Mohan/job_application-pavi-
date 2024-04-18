@@ -74,7 +74,43 @@ button:hover {
   color: #ed563b;
   font-weight: 900;
 }
+@media only screen and (max-width: 480px) {
+  .main-banner {
+    height: 50vh;
+  }
 
+  .main-banner .caption h4 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  .main-banner .caption h2 {
+    font-size: 28px;
+  }
+
+  .main-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  #bg-video {
+    object-fit: cover;
+  }
+
+  .video-overlay {
+    position: relative;
+    height: 100%;
+  }
+
+  .caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+}
 </style>
 
     </head>
