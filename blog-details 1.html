@@ -269,30 +269,25 @@ This webinar will be conducted online via Zoom and the link will be shared upon 
                         <h4>Leave a comment</h4>
                 
                         <div class="contact-form">
-                            <form action="" method="post">
-                              <div class="row">
-                                <div class="col-lg-12">
-                                  <fieldset>
-                                    <input name="name" type="text" id="name" placeholder="Your Name*" required="">
-                                  </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                  <fieldset>
-                                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email*" required="">
-                                  </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                  <fieldset>
-                                    <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
-                                  </fieldset>
-                                </div>
-                                <div class="col-lg-12">
-                                  <fieldset>
-                                    <button type="submit" id="form-submit" class="main-button">Submit</button>
-                                  </fieldset>
-                                </div>
-                              </div>
-                            </form>
+                            <form action="/comments" method="post">
+    <div class="row">
+      <div class="col-lg-12">
+        <fieldset>
+          <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+        </fieldset>
+      </div>
+      <div class="col-lg-12">
+        <fieldset>
+          <textarea name="comment" rows="6" id="comment" placeholder="Message" required=""></textarea>
+        </fieldset>
+      </div>
+      <div class="col-lg-12">
+        <fieldset>
+          <button type="submit" id="form-submit" class="main-button" onclick="submit()" >Submit</button>
+        </fieldset>
+      </div>
+    </div>
+  </form>
                         </div>
                     </div>
                 </div>
@@ -316,6 +311,8 @@ This webinar will be conducted online via Zoom and the link will be shared upon 
     <script src="assets/js/accordions.js"></script>
     <script src="assets/js/custom.js"></script>
 		<script>
+		  	  	   function submit() {
+    window.location.href = "blog-detals 1.html";
 	const darkModeBtn = document.getElementById('dark-mode-btn');
 let darkMode = false;
 
